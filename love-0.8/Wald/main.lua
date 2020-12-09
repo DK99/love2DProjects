@@ -1,0 +1,30 @@
+function love.draw()
+  baum(200, 200, 10, 30)
+  baum(300, 200, 10, 30)
+  baum(400, 200, 10, 30)
+  love.graphics.setColor(	24,116,205)
+  love.graphics.rectangle("fill",0, 0, 900, 150)
+  wolke(50, 50, 50, 30)
+end
+
+function baum(x, y, w, h)
+  love.graphics.setColor(139,69,19)
+  love.graphics.rectangle("fill", x, y, w, h)
+  love.graphics.rectangle("fill", x+200, y, w, h)
+  love.graphics.rectangle("fill", x, y+300, w, h)
+  love.graphics.rectangle("fill", x+200, y+300, w, h)
+  love.graphics.setColor(0,139,0)
+  love.graphics.circle("fill", x, y, w, 30)
+  love.graphics.circle("fill", x+200, y, w, 30)
+  love.graphics.circle("fill", x, y+300, w, 30)
+  love.graphics.circle("fill", x+200, y+300, w, 30)
+end
+
+function wolke(x, y, w, h)
+  love.graphics.setColor(255, 255, 255)
+  love.graphics.circle("fill", x+100, y, w, 30)
+  love.graphics.circle("fill", x+200, y, w, 30)
+  love.graphics.circle("fill", x+400, y, w, 30)
+  love.graphics.circle("fill", x+300, y, w, 30)
+  love.graphics.circle("fill", x+500, y, w, 30)
+end
